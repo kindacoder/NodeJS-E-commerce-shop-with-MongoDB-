@@ -1,0 +1,10 @@
+.card-image img{
+  height:320px;
+  width: 320px;
+}
+#card-title-text{
+  color:red;
+}
+.card-title{
+  color:red !important;
+}
