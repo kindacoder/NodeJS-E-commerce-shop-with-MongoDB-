@@ -53,166 +53,33 @@
   <br>
   <div class="row">
 
-
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/image1.jpg">
-              <span id="card-title-text" class="card-title">Card Title</span>
+  <%products.forEach(function (hi) { %>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="/public/images/<%= hi.imagePath %>">
+          <span id="card-title-text" class="card-title"><%= hi.title %></span>
+        </div>
+        <div class="card-content">
+          <p><%= hi.description %></p>
+        </div>
+        <div class="card-action">
+          <div class="row">
+            <div class="col">
+              Price :<b><%= hi.price %> Rs.</b>
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <div class="row">
-                <div class="col">
-                  Price :<b>100 Rs.</b>
-                </div>
-                <div class="col right">
-                  <a class="waves-effect waves-light btn " href="#">Buy</a>
-                </div>
-              </div>
+            <div class="col right">
+              <a class="waves-effect waves-light btn " href="#">Buy</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/image2.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <div class="row">
-                <div class="col">
-                  Price :<b>100 Rs.</b>
-                </div>
-                <div class="col right right right right">
-                  <a class="waves-effect waves-light btn"  href="#">Buy</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/image3.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <div class="row">
-                <div class="col">
-                  Price :<b>100 Rs.</b>
-                </div>
-                <div class="col right right right right">
-                  <a class="waves-effect waves-light btn"  href="#">Buy</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/image4.png">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <div class="row">
-                <div class="col">
-                  Price :<b>100 Rs.</b>
-                </div>
-                <div class="col right right right">
-                  <a class="waves-effect waves-light btn"  href="#">Buy</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/image5.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <div class="row">
-                <div class="col">
-                  Price :<b>100 Rs.</b>
-                </div>
-                <div class="col right right">
-                  <a class="waves-effect waves-light btn"href="#">Buy</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/image6.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <div class="row">
-                <div class="col">
-                  Price :<b>100 Rs.</b>
-                </div>
-                <div class="col right">
-                  <a class="waves-effect waves-light btn"  href="#">Buy</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+      <% }) %>
 
 
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

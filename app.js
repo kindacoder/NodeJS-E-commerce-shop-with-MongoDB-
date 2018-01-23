@@ -1,8 +1,11 @@
 const express=require('express');
 const mongoose=require('mongoose');
 var keys=require('./config/keys/keys');
-
+var session=require('express-session');
+var bodyParser=require('body-parser');
+var cookieParser=require('cookie-parser');
 const mainRoute=require('./routes');
+const userRoute=require('./routes/user-route');
 
 const app=express();
 
@@ -14,9 +17,17 @@ app.use('/public',express.static('public'));
 
 app.set('view engine','ejs');
 
+
+//Using all the mddlewares
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(session({secret:'AshutoshNewEcommerceWebsite',resave:false,saveUninitialized:false}));
+
 var title='express';
 ///set Router
 app.use('/',mainRoute);
+app.use('/user',userRoute);
 
 
 
