@@ -6,6 +6,8 @@ var bodyParser=require('body-parser');
 var cookieParser=require('cookie-parser');
 const mainRoute=require('./routes');
 const userRoute=require('./routes/user-route');
+var passport=require('passport');
+var flash=require('connect-flash');
 
 const app=express();
 
@@ -13,6 +15,7 @@ const app=express();
 mongoose.connect('mongodb://localhost:27017/kindashop',()=>{
   console.log('Connected to database');
 })
+require('./config/passport');
 app.use('/public',express.static('public'));
 
 app.set('view engine','ejs');
@@ -23,14 +26,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(session({secret:'AshutoshNewEcommerceWebsite',resave:false,saveUninitialized:false}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 var title='express';
 ///set Router
 app.use('/',mainRoute);
 app.use('/user',userRoute);
-
-
-
 
 //listen to server
 app.listen('3000',(req,res)=>{

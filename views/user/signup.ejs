@@ -62,28 +62,28 @@
                         <div class="row">
                           <div class="input-field col s12">
                             <i class="fa fa-user prefix" aria-hidden="true"></i>
-                            <input id="name" type="text" class="validate">
+                            <input id="name" name="name" type="text" class="validate">
                             <label for="first_name">Name</label>
                           </div>
                         </div>
                         <div class="row">
                           <div class="input-field col s12">
                           <i class="fa fa-envelope prefix" aria-hidden="true"></i>
-                            <input id="email" type="email" class="validate">
+                            <input id="email" name="email" type="email" class="validate">
                             <label for="email">Email</label>
                           </div>
                         </div>
                         <div class="row">
                           <div class="input-field col s12">
                             <i class="fa fa-unlock-alt prefix" aria-hidden="true"></i>
-                            <input id="password" type="password" class="validate">
+                            <input id="password" name="password" type="password" class="validate">
                             <label for="password">Password</label>
                           </div>
                         </div>
                         <div class="row">
                           <div class="input-field col s12">
                             <i class="fa fa-phone prefix" aria-hidden="true"></i>
-                            <input id="phone" type="tel" class="validate">
+                            <input id="phone" name="mobile" type="tel" class="validate">
                             <label for="password">Mobile</label>
                           </div>
                         </div>
@@ -97,7 +97,7 @@
                               </button>
                             </div>
                           </div>
-                          <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+                          <input type="hidden" name="_csrf" value="<%=csrfToken %>">
                       </form>
 
                     </div>
