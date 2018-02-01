@@ -8,6 +8,8 @@ const mainRoute=require('./routes');
 const userRoute=require('./routes/user-route');
 var passport=require('passport');
 var flash=require('connect-flash');
+var validator=require('express-validator');
+
 
 const app=express();
 
@@ -24,6 +26,7 @@ app.set('view engine','ejs');
 //Using all the mddlewares
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
+ap.use(validator());
 app.use(cookieParser());
 app.use(session({secret:'AshutoshNewEcommerceWebsite',resave:false,saveUninitialized:false}));
 app.use(flash());
