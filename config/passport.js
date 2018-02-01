@@ -23,11 +23,16 @@ var LocalStratey=require('passport-local').Strategy;
 
 
 passport.use('local-signup', new LocalStratey({
+
   usernameField:'email',
   passwordField:'password',
-  passReqToCallback:true  ///allows us to pass back the entire request to the passReqToCallback
+  passReqToCallback:true,  ///allows us to pass back the entire request to the passReqToCallback
+
 },
+
 function(req,email,password,done){
+  var name=req.body.name;
+  var mobile=req.body.mobile
   //asynchronous process
   //User.findOne wont fire unless data is sent back
 
