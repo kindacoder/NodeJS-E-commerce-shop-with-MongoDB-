@@ -40,5 +40,5 @@ app.use('/user',userRoute);
 
 //listen to server
 app.listen('3000',(req,res)=>{
-  console.log('Server Started at port 3000');
+  console.log('Server Started at port no 3000');
 })
